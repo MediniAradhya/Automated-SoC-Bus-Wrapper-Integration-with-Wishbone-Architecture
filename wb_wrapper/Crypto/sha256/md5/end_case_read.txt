@@ -1,0 +1,4 @@
+default:
+                wb_dat_o = 32'b0;
+        endcase
+    end

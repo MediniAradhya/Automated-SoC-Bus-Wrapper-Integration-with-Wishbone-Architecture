@@ -1,0 +1,36 @@
+
+           wb_adr_i, wb_cyc_i, wb_dat_i, wb_sel_i,
+           wb_stb_i, wb_we_i,
+           wb_ack_o, wb_err_o, wb_dat_o,
+           wb_clk_i, wb_rst_i, int_o
+       );
+
+parameter dw = 32;
+parameter aw = 32;
+
+input [aw-1:0] wb_adr_i;
+input   wb_cyc_i;
+input [dw-1:0]  wb_dat_i;
+input [3:0]   wb_sel_i;
+input   wb_stb_i;
+input   wb_we_i;
+
+output   wb_ack_o;
+output   wb_err_o;
+output reg [dw-1:0]  wb_dat_o;
+output  int_o;
+
+input   wb_clk_i;
+input   wb_rst_i;
+
+assign wb_ack_o = 1'b1;
+assign wb_err_o = 1'b0;
+assign int_o = 1'b0;
+
+// Internal registers
+reg startHash, startHash_r;
+reg newMessage, newMessage_r;
+
+wire ready;
+wire hashValid;
+

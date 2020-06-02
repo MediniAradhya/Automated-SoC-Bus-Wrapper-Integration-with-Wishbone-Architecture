@@ -1,0 +1,14 @@
+ end
+        else begin
+
+            // Generate a registered versions of startHash and newMessage
+            startHash_r         <= startHash;
+            newMessage_r        <= newMessage;
+
+            // Perform a write
+            if(wb_stb_i & wb_we_i) begin
+                case(wb_adr_i[6:2])
+                    0:  begin
+                            startHash <= wb_dat_i[0];
+                            newMessage <= wb_dat_i[1];
+                        end

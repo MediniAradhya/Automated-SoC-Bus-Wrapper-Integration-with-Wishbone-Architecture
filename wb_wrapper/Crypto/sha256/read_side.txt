@@ -1,0 +1,16 @@
+ default:
+                        ;
+                endcase
+            end else begin
+                startHash           <= 1'b0;
+                newMessage          <= 1'b0;
+            end // end else
+        end
+    end // end always
+
+// Implement SHA256 I/O memory map interface
+// Read side
+always @(*)
+    begin
+        case(wb_adr_i[6:2])
+            0:  wb_dat_o = {31'b0, ready};

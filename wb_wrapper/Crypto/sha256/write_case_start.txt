@@ -1,0 +1,8 @@
+always @(posedge wb_clk_i)
+    begin
+        if(wb_rst_i)
+            begin
+                startHash       <= 0;
+                startHash_r     <= 0;
+                newMessage      <= 0;
+                newMessage_r    <= 0;

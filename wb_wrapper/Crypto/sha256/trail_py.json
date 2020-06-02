@@ -1,0 +1,58 @@
+{
+	"R_1": {
+		"neighbors": ["EP_1","EP_2","EP_3","EP_4","EP_5","EP_6","EP_7"],
+		"is_Router": true,
+		"top_module_fname": "wb_bus_b3.v",
+		"is_Master": false,
+		"is_Slave": false
+	},
+	"EP_1": {
+		"neighbors": ["R_1"],
+		"is_Router": false,
+		"top_module_fname": "aes_top.v",
+		"is_Master": false,
+		"is_Slave": true
+		},
+	"EP_2": {
+		"neighbors": ["R_1"],
+		"is_Router": false,
+		"top_module_fname": "picorv32_top.v",
+		"is_Master": true,
+		"is_Slave": false
+	},
+	"EP_3": {
+		"neighbors": ["R_1"],
+		"is_Router": false,
+		"top_module_fname": "ram_wb_b3.v",
+		"is_Master": false,
+		"is_Slave": true
+		},
+	"EP_4": {
+		"neighbors": ["R_1"],
+		"is_Router": false,
+		"top_module_fname": "des3_top.v",
+		"is_Master": false,
+		"is_Slave": true
+		},
+	"EP_5": {
+		"neighbors": ["R_1"],
+		"is_Router": false,
+		"top_module_fname": "sha256_top.v",
+		"is_Master": false,
+		"is_Slave": true
+		},
+	"EP_6": {
+		"neighbors": ["R_1"],
+		"is_Router": false,
+		"top_module_fname": "fir_top.v",
+		"is_Master": false,
+		"is_Slave": true
+		},
+	"EP_7": {
+		"neighbors": ["R_1"],
+		"is_Router": false,
+		"top_module_fname": "idft_top_top.v",
+		"is_Master": false,
+		"is_Slave": true
+		}
+}
